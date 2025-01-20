@@ -1,0 +1,75 @@
+body {
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color:rgb(216, 210, 216);
+}
+
+.sprite-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.sprite {
+  width: 50px; 
+  height: 84px; 
+  background: url('mario.png'); 
+  animation: caminar 0.8s steps(2) infinite;
+  margin: 10px;
+}
+
+h2{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 34px;
+  color: #bb2121;
+}
+
+h4{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.caminant-nord {
+  background-position-y: -240px; 
+}
+
+.caminant-sud {
+  background-position-y: 5px;
+
+}
+
+.caminant-est {
+  background-position-y: -160px;
+}
+
+.caminant-oest {
+  background-position-y: -80px;
+}
+
+.idle {
+
+  animation: estatic 0.8s steps(5) infinite;
+}
+
+@keyframes caminar{
+
+  from {
+    background-position-x: 5;
+  }
+  to {
+    background-position-x: -130px;
+  }
+}
+
+@keyframes estatic{
+
+  from {
+    background-position-x: -65px;
+    background-position-y: 5px;
+  }
+  to {
+    background-position-x: -65px;
+  }
+}
